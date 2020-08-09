@@ -49,7 +49,7 @@ void readFromFile(string fileName)
     ifstream infile(fileName);
 
     if (!infile) {//ファイルが見つからない場合の処理
-        cout << "ファイルが見つかりません、ファイル名や、ファイルの型を確認してください。"<<endl;
+        cout << "ファイルが見つかりません、ファイル名や、ファイルの場所を確認してください。"<<endl;
     }
     else {//ファイルが見つかった場合の処理
 
@@ -141,7 +141,7 @@ void readFromFile(string fileName)
 
 int main() {
 
-    readFromFile("東京.txt");//外部ファイルの指定，関数の実行
+    readFromFile("福岡.txt");//外部ファイルの指定，関数の実行
 
 }
 
