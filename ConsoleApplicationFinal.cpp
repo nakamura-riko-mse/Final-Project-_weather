@@ -106,7 +106,7 @@ void readFromFile(string fileName)
             {
                 cout << "前日より暑いでしょう" << endl;
             }
-            else if (v1[i].getTemp() > v1[i - 1].getTemp())
+            else if (v1[i].getTemp() < v1[i - 1].getTemp())
             {
                 cout << "前日より涼しいです" << endl;
             }
@@ -127,7 +127,7 @@ void readFromFile(string fileName)
             if (v1[i].getRain() != 0) {}
             else if (v1[i].getSun() >= 10) {
                 cout << "洗濯日和です。" << endl;
-                if (v1[i].getWind() > 5) {
+                if (v1[i].getWind() >= 5) {
                     cout << "しかし，風で飛ばされないよう気をつけましょう" << endl;
                 }
             }
