@@ -90,11 +90,11 @@ void readFromFile(string fileName)
                 << "℃　最高気温は" << v1[i].getTempMax() << "℃です。" << endl;
 
             //夏の注意喚起、最高気温について
-            if (v1[i].getTempMax() > 29)
+            if (v1[i].getTempMax() >=30)
             {
                 cout << "真夏日となります、熱中症には十分気をつけましょう" << endl;
             }
-            else if (v1[i].getTempMax() > 24)
+            else if (v1[i].getTempMax() >= 25)
             {
                 cout << "夏日です。野外での活動の際は水分をしっかり補給しましょう" << endl;
             }
@@ -118,14 +118,14 @@ void readFromFile(string fileName)
                 << "”午後の天気は“" << v1[i].getWeatherPM() << "”です。" << endl;
 
             //湿度について
-            if (v1[i].getHum() > 80) {
+            if (v1[i].getHum() >= 80) {
                 cout << "蒸し蒸しとした一日になるでしょう" << endl;
             }
 
 
             //洗濯物
             if (v1[i].getRain() != 0) {}
-            else if (v1[i].getSun() < 10) {
+            else if (v1[i].getSun() >= 10) {
                 cout << "洗濯日和です。" << endl;
                 if (v1[i].getWind() > 5) {
                     cout << "しかし，風で飛ばされないよう気をつけましょう" << endl;
